@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Calendar, User, DollarSign, Bell, CalendarDays, Key, FileText, Briefcase } from 'lucide-react';
+import { Calendar, User, IndianRupee, Bell, CalendarDays, Key, FileText, Briefcase } from 'lucide-react';
 import ModernGlassCard from '@/components/ui/ModernGlassCard';
 
 export default function QuickActionsCard() {
@@ -24,7 +24,7 @@ export default function QuickActionsCard() {
         {
             label: "Payslips",
             href: "/employee/salary",
-            icon: <DollarSign size={20} />,
+            icon: <IndianRupee size={20} />,
             color: "bg-green-500",
             desc: "View salary history"
         },

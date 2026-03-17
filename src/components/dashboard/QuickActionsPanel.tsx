@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import ModernGlassCard from '@/components/ui/ModernGlassCard';
-import { UserPlus, Calendar, DollarSign, Megaphone, CheckCircle, Clock, Zap } from 'lucide-react';
+import { UserPlus, Calendar, IndianRupee, Megaphone, CheckCircle, Clock, Zap } from 'lucide-react';
 
 interface QuickAction {
     id: string;
@@ -37,7 +37,7 @@ export default function QuickActionsPanel({ pendingLeaves = 0, pendingAttendance
         {
             id: 'generate-salary',
             label: 'Run Payroll',
-            icon: <DollarSign size={20} />,
+            icon: <IndianRupee size={20} />,
             link: '/admin/salary/generate',
             gradient: 'from-purple-500 to-purple-600'
         },

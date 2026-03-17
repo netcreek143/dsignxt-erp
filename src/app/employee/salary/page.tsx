@@ -5,7 +5,7 @@ import Sidebar from '@/components/Sidebar';
 import PageHeader from '@/components/ui/PageHeader';
 import ModernGlassCard from '@/components/ui/ModernGlassCard';
 import { generateSalarySlipPDF } from '@/lib/salary-slip-pdf';
-import { Download, DollarSign, Calendar, TrendingUp, AlertCircle, CheckCircle } from 'lucide-react';
+import { Download, IndianRupee, Calendar, TrendingUp, AlertCircle, CheckCircle } from 'lucide-react';
 
 export default function MySalary() {
     const [salaries, setSalaries] = useState<any[]>([]);
