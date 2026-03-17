@@ -36,12 +36,12 @@ export default function SalaryTrendChart({ data }: SalaryTrendChartProps) {
                             tickLine={false}
                             axisLine={false}
                             tick={{ fill: '#9CA3AF' }}
-                            tickFormatter={(value) => `$${value / 1000}k`}
+                            tickFormatter={(value) => `₹${value / 1000}k`}
                         />
                         <Tooltip
                             cursor={{ stroke: '#F97316', strokeWidth: 2 }}
                             contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
-                            formatter={(value: any) => [`$${Number(value).toLocaleString()}`, 'Total Payout']}
+                            formatter={(value: any) => [`₹${Number(value).toLocaleString()}`, 'Total Payout']}
                         />
                         <Line
                             type="monotone"

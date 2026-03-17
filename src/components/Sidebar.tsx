@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useAuth } from '@/context/AuthContext';
 import { usePathname } from 'next/navigation';
 import NotificationBell from './NotificationBell';
+import ThemeToggle from './ThemeToggle';
 import { useState, useEffect } from 'react';
 import { Menu, X, ChevronRight, LogOut } from 'lucide-react';
 
@@ -85,11 +86,20 @@ export default function Sidebar() {
             <header className="md:hidden fixed top-0 left-0 right-0 h-16 bg-white/95 backdrop-blur-md z-[50] px-4 flex items-center justify-between border-b border-gray-200 shadow-sm">
                 <div className="bg-white rounded-lg px-3 py-1 flex items-center shadow-md border border-gray-100">
                     <Image
-                        src="/promptix-logo-dark.png"
-                        alt="PromptiX"
+                        src="/logoblack.png"
+                        alt="Dsignxt ERP"
                         width={120}
                         height={40}
-                        className="h-9 w-auto object-contain scale-125"
+                        className="h-9 w-auto object-contain scale-125 dark:hidden"
+                        unoptimized
+                    />
+                    <Image
+                        src="/logowhite.png"
+                        alt="Dsignxt ERP"
+                        width={120}
+                        height={40}
+                        className="h-9 w-auto object-contain scale-125 hidden dark:block"
+                        unoptimized
                     />
                 </div>
                 <div className="flex items-center gap-3">
@@ -125,12 +135,22 @@ export default function Sidebar() {
                 <div className="h-40 flex flex-col items-center justify-center border-b border-gray-200 bg-gray-50 relative">
                     <div className="bg-white px-5 py-3 rounded-2xl shadow-sm border border-gray-200 flex items-center justify-center mt-2 group hover:shadow-md transition-all">
                         <Image
-                            src="/promptix-logo-dark.png"
-                            alt="PromptiX CRM"
+                            src="/logoblack.png"
+                            alt="Dsignxt ERP"
                             width={160}
                             height={160}
-                            className="h-20 w-auto object-contain scale-[1.3] group-hover:scale-[1.35] transition-transform"
+                            className="h-20 w-auto object-contain scale-[1.3] group-hover:scale-[1.35] transition-transform dark:hidden"
                             priority
+                            unoptimized
+                        />
+                        <Image
+                            src="/logowhite.png"
+                            alt="Dsignxt ERP"
+                            width={160}
+                            height={160}
+                            className="h-20 w-auto object-contain scale-[1.3] group-hover:scale-[1.35] transition-transform hidden dark:block"
+                            priority
+                            unoptimized
                         />
                     </div>
                     {/* Close button visible only on mobile inside drawer for easier reach */}
@@ -162,10 +182,11 @@ export default function Sidebar() {
                             </div>
                             <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full box-content"></div>
                         </div>
-                        <div className="overflow-hidden">
-                            <h3 className="font-semibold text-navy-900 truncate text-base tracking-wide">{user.name}</h3>
+                        <div className="overflow-hidden flex-1">
+                            <h3 className="font-semibold text-navy-900 truncate text-base tracking-wide dark:text-white">{user.name}</h3>
                             <p className="text-xs text-orange-600 font-bold tracking-wider uppercase">{user.role}</p>
                         </div>
+                        <ThemeToggle />
                     </div>
                 </div>
 
@@ -187,7 +208,7 @@ export default function Sidebar() {
                 <div className="p-4 border-t border-gray-200 bg-gray-50">
                     <div className="md:hidden mb-4 flex justify-between items-center text-xs text-gray-500 px-2">
                         <span>v1.2.0</span>
-                        <span>PromptiX CRM</span>
+                        <span>Dsignxt ERP</span>
                     </div>
                     <button
                         onClick={logout}

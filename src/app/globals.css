@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --font-sans: "Zalando Sans Expanded", sans-serif;
@@ -16,11 +17,28 @@
   --bg-light: #f0f2f5;
   --text-dark: #1f1f1f;
   --text-light: #ffffff;
+  --card-bg: #ffffff;
+  --border-color: #e5e7eb;
+}
+
+html.dark {
+  --primary-navy: #4da6ff; /* Lighter navy for text visibility */
+  --secondary-navy: #001529;
+  --bg-light: #0d1117; /* Deep github-like dark theme */
+  --text-dark: #f0f6fc; /* Off white text */
+  --card-bg: #161b22;
+  --border-color: #30363d;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Modern Gradient Background */
 .bg-mesh-gradient {
-  background-color: #f3f4f6;
+  background-color: var(--bg-light);
   background-image:
     radial-gradient(at 0% 0%, rgba(255, 107, 0, 0.1) 0px, transparent 50%),
     radial-gradient(at 100% 0%, rgba(0, 21, 41, 0.1) 0px, transparent 50%),
@@ -104,19 +122,19 @@
 }
 
 .card {
-  background-color: white;
+  background-color: var(--card-bg);
   padding: 1.5rem;
   border-radius: 0.5rem;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--border-color);
 }
 
 .table-container {
-  background-color: white;
+  background-color: var(--card-bg);
   border-radius: 0.5rem;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   overflow-x: auto;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--border-color);
 }
 
 .table {
@@ -126,19 +144,19 @@
 }
 
 .table th {
-  background-color: #f9fafb;
+  background-color: color-mix(in srgb, var(--card-bg) 95%, var(--text-dark));
   padding: 0.75rem 1.5rem;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--border-color);
   font-size: 0.75rem;
   font-weight: 600;
-  color: #6b7280;
+  color: var(--text-dark);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
 .table td {
   padding: 1rem 1.5rem;
-  border-bottom: 1px solid #f3f4f6;
+  border-bottom: 1px solid var(--border-color);
   font-size: 0.875rem;
 }
 
@@ -170,7 +188,9 @@
 }
 
 .field-input {
-  border: 1px solid #d1d5db;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+  color: var(--text-dark);
   border-radius: 0.25rem;
   outline: none;
   width: 100%;
@@ -193,7 +213,7 @@
 }
 
 .modal {
-  background-color: white;
+  background-color: var(--card-bg);
   padding: 1.5rem;
   border-radius: 0.5rem;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
@@ -202,6 +222,7 @@
   max-width: 28rem;
   max-height: 90vh;
   overflow-y: auto;
+  border: 1px solid var(--border-color);
 }
 
 .min-h-touch {

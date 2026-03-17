@@ -11,7 +11,7 @@ async function seedTestAdmin() {
         await dbConnect();
         console.log('Connected to database...');
 
-        const testEmail = 'test_admin@promptix.com';
+        const testEmail = 'test_admin@dsignxt.com';
         const existing = await User.findOne({ email: testEmail });
 
         if (existing) {

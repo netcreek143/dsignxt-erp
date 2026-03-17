@@ -12,7 +12,7 @@ async function seed() {
         const users = db.collection('users');
 
         // Admin
-        await users.updateOne({ email: 'admin@promptix.com' }, {
+        await users.updateOne({ email: 'admin@dsignxt.com' }, {
             $set: { password: adminHash, role: 'ADMIN', isOnboardingCompleted: true }
         }, { upsert: true });
 

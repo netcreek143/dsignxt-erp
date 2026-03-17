@@ -29,7 +29,7 @@ export const generateSalarySlip = (data: SalarySlipData) => {
     doc.setTextColor(255, 255, 255);
     doc.setFontSize(22);
     doc.setFont('helvetica', 'bold');
-    doc.text('PromptiX Tech Solutions', 14, 25);
+    doc.text('Dsignxt Tech Solutions', 14, 25);
 
     doc.setFontSize(12);
     doc.setFont('helvetica', 'normal');
@@ -97,7 +97,7 @@ export const generateSalarySlip = (data: SalarySlipData) => {
     doc.setFontSize(8);
     doc.setTextColor(150, 150, 150);
     doc.text('This is a computer-generated document and does not require a signature.', 105, pageHeight - 10, { align: 'center' });
-    doc.text('PromptiX CRM v1.0', 14, pageHeight - 10);
+    doc.text('Dsignxt ERP v1.0', 14, pageHeight - 10);
 
     // Save
     doc.save(`SalarySlip_${data.employeeName.replace(/\s+/g, '_')}_${data.month}_${data.year}.pdf`);

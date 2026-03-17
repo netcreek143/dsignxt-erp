@@ -56,7 +56,7 @@ export default function EnhancedKPICard({
                 {loading ? (
                     <div className="h-8 w-24 bg-gray-200 rounded animate-pulse"></div>
                 ) : (
-                    <p className="text-3xl font-black text-navy-900 tracking-tight">{value}</p>
+                    <p className="text-3xl font-black text-navy-900 dark:text-white tracking-tight">{value}</p>
                 )}
             </div>
 

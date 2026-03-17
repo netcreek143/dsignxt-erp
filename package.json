@@ -1,5 +1,5 @@
 {
-  "name": "crm-temp",
+  "name": "dsignxt-erp",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -30,6 +30,7 @@
     "lucide-react": "^0.562.0",
     "mongoose": "^9.0.2",
     "next": "16.1.1",
+    "next-themes": "^0.4.6",
     "node-fetch": "^2.7.0",
     "nodemailer": "^8.0.1",
     "papaparse": "^5.5.3",

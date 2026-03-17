@@ -9,7 +9,7 @@ import RecentActivityFeed from '@/components/dashboard/RecentActivityFeed';
 import WeeklyAttendanceChart from '@/components/dashboard/WeeklyAttendanceChart';
 import SalaryTrendChart from '@/components/dashboard/SalaryTrendChart';
 import ModernGlassCard from '@/components/ui/ModernGlassCard';
-import { Users, Target, Calendar, Clock, DollarSign, Lock } from 'lucide-react';
+import { Users, Target, Calendar, Clock, IndianRupee, Lock } from 'lucide-react';
 
 export default function AdminDashboard() {
     const [stats, setStats] = useState<any>(null);
@@ -42,10 +42,10 @@ export default function AdminDashboard() {
                 {/* Header */}
                 <header className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
                     <div>
-                        <h1 className="text-3xl font-black text-navy-900 tracking-tight">Admin Dashboard</h1>
+                        <h1 className="text-3xl font-black text-navy-900 dark:text-white tracking-tight">Admin Dashboard</h1>
                         <p className="text-gray-500 font-medium mt-1">System Overview & Performance Metrics</p>
                     </div>
-                    <div className="glass-panel px-5 py-2.5 rounded-xl text-sm text-navy-900 font-bold border border-white/50 shadow-sm flex items-center gap-2">
+                    <div className="glass-panel px-5 py-2.5 rounded-xl text-sm text-navy-900 dark:text-white font-bold border border-white/50 dark:border-white/10 shadow-sm flex items-center gap-2">
                         <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
                         {dateTime}
                     </div>
@@ -105,7 +105,7 @@ export default function AdminDashboard() {
                             <EnhancedKPICard
                                 title="Salary Drafts"
                                 value={stats?.salary?.draft || 0}
-                                icon={<DollarSign size={24} />}
+                                icon={<IndianRupee size={24} />}
                                 color="text-purple-600 bg-purple-500"
                                 link="/admin/salary/generate"
                                 badge={stats?.salary?.draft}

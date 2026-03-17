@@ -117,7 +117,7 @@ export default function EmployeeProfileSetup() {
             <div className="max-w-4xl w-full bg-white rounded-2xl shadow-xl overflow-hidden">
                 {/* Header */}
                 <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-8 text-white">
-                    <h1 className="text-3xl font-bold mb-2">Welcome to PromptiX! 🎉</h1>
+                    <h1 className="text-3xl font-bold mb-2">Welcome to Dsignxt! 🎉</h1>
                     <p className="opacity-90 text-lg">Please complete your employee profile to continue.</p>
                 </div>
 

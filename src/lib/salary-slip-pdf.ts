@@ -32,7 +32,7 @@ export function generateSalarySlipPDF(salaryData: SalaryData) {
     doc.setTextColor(255, 255, 255);
     doc.setFontSize(24);
     doc.setFont('helvetica', 'bold');
-    doc.text('PromptiX', 105, 20, { align: 'center' });
+    doc.text('Dsignxt', 105, 20, { align: 'center' });
 
     doc.setFontSize(12);
     doc.setFont('helvetica', 'normal');
@@ -129,7 +129,7 @@ export function generateSalarySlipPDF(salaryData: SalaryData) {
     doc.setTextColor(128, 128, 128);
     doc.text('This is a computer-generated document. No signature is required.', 105, pageHeight - 20, { align: 'center' });
     doc.text(`Generated on: ${new Date().toLocaleDateString()}`, 105, pageHeight - 15, { align: 'center' });
-    doc.text('© PromptiX Inc. All rights reserved.', 105, pageHeight - 10, { align: 'center' });
+    doc.text('© Dsignxt Inc. All rights reserved.', 105, pageHeight - 10, { align: 'center' });
 
     // Save the PDF
     const fileName = `Salary_${salaryData.employeeName.replace(/\s+/g, '_')}_${monthNames[salaryData.month]}_${salaryData.year}.pdf`;

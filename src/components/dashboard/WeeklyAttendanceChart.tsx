@@ -24,9 +24,9 @@ export default function WeeklyAttendanceChart({ data }: WeeklyAttendanceChartPro
     return (
         <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 h-full">
             <h3 className="text-lg font-bold text-navy-900 mb-4">Weekly Attendance Overview</h3>
-            <div className="h-64">
+            <div className="h-72">
                 <ResponsiveContainer width="100%" height="100%">
-                    <BarChart data={formattedData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+                    <BarChart data={formattedData} margin={{ top: 10, right: 10, left: 0, bottom: 20 }}>
                         <XAxis dataKey="name" fontSize={12} tickLine={false} axisLine={false} />
                         <YAxis fontSize={12} tickLine={false} axisLine={false} />
                         <Tooltip

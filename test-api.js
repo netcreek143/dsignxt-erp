@@ -30,7 +30,7 @@ async function testAPI() {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                email: 'admin@promptix.com',
+                email: 'admin@dsignxt.com',
                 password: 'admin123'
             })
         });
@@ -45,7 +45,7 @@ async function testAPI() {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                email: 'admin@promptix.com',
+                email: 'admin@dsignxt.com',
                 password: 'wrongpassword'
             })
         });
@@ -83,7 +83,7 @@ async function testAPI() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-            email: 'admin@promptix.com',
+            email: 'admin@dsignxt.com',
             password: 'admin123'
         })
     });

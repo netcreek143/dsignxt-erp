@@ -11,8 +11,8 @@ const SECRET = new TextEncoder().encode(process.env.JWT_SECRET || 'fallback-secr
 function getCorsHeaders(origin: string | null) {
     const allowedOrigins = [
         "http://localhost:5173",
-        "https://promptix.pro",
-        "https://www.promptix.pro"
+        "https://dsignxt.com",
+        "https://www.dsignxt.com"
     ];
 
     const headers: Record<string, string> = {

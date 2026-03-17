@@ -6,8 +6,8 @@ const SECRET = new TextEncoder().encode(process.env.JWT_SECRET || 'fallback-secr
 
 const allowedOrigins = [
     'http://localhost:5173',
-    'https://promptix.pro',
-    'https://www.promptix.pro'
+    'https://dsignxt.com',
+    'https://www.dsignxt.com'
 ];
 
 export async function middleware(req: NextRequest) {

@@ -34,8 +34,8 @@ export default function LoginPage() {
         <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
             <div className="w-full max-w-md bg-white rounded-xl shadow-2xl overflow-hidden">
                 <div className="bg-navy-900 p-8 text-center">
-                    <h1 className="text-3xl font-bold text-white mb-2">PromptiX</h1>
-                    <p className="text-gray-300">CRM & Learning Management</p>
+                    <h1 className="text-3xl font-bold text-white mb-2">Dsignxt</h1>
+                    <p className="text-gray-300">ERP Software</p>
                 </div>
 
                 <div className="p-8">
@@ -81,7 +81,7 @@ export default function LoginPage() {
                     </form>
                 </div>
                 <div className="bg-gray-50 px-8 py-4 text-center text-sm text-gray-500">
-                    Need help? Contact support via <a href="https://promptix.pro" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-orange-600 transition-colors">promptix.pro</a>
+                    Need help? Contact support via <a href="https://dsignxt.com" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-orange-600 transition-colors">dsignxt.com</a>
                 </div>
             </div>
         </div>

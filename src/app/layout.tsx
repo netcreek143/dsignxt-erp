@@ -3,13 +3,14 @@ import './globals.css';
 import { AuthProvider } from '@/context/AuthContext';
 
 export const metadata: Metadata = {
-  title: 'PromptiX CRM',
-  description: 'Internal CRM handling Admin and Employee portals',
+  title: 'Dsignxt ERP',
+  description: 'Internal ERP handling Admin and Employee portals',
 };
 
 import { Toaster } from 'sonner';
 import { CommandMenu } from '@/components/CommandMenu';
 import AIAssistant from '@/components/ai/AIAssistant';
+import { ThemeProvider } from '@/components/ThemeProvider';
 
 export default function RootLayout({
   children,
@@ -19,12 +20,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body suppressHydrationWarning>
-        <AuthProvider>
-          {children}
-          <Toaster position="top-right" richColors closeButton />
-          <CommandMenu />
-          <AIAssistant />
-        </AuthProvider>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <AuthProvider>
+            {children}
+            <Toaster position="top-right" richColors closeButton />
+            <CommandMenu />
+            <AIAssistant />
+          </AuthProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

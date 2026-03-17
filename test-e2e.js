@@ -56,7 +56,7 @@ async function runTests() {
 
     // Test 1.1: Admin Login
     const adminLogin = await request('POST', '/api/auth/login', {
-        email: 'admin@promptix.com',
+        email: 'admin@dsignxt.com',
         password: 'admin123'
     });
 
